@@ -4,6 +4,32 @@ A minimal, responsive academic homepage template for GitHub Pages.
 
 This template is designed for students, researchers, and early-career academics who want to build a clean personal academic homepage with only one `index.html` file.
 
+## Preview
+
+Live demo:
+
+    https://xin-jiaqi.github.io/minimal-academic-homepage/
+
+This demo shows the default template layout, including profile, selected publications, projects, education & experience, awards, and posts & notes.
+
+## Screenshots
+
+Desktop and mobile overview:
+
+![Homepage overview](assets/demo-overview.jpg)
+
+Selected publications:
+
+![Selected publications](assets/demo-publications.jpg)
+
+Projects, education, and awards:
+
+![Projects and experience](assets/demo-projects-experience.jpg)
+
+Posts and notes:
+
+![Posts and notes](assets/demo-posts-notes.jpg)
+
 ## Features
 
 - Single-file HTML/CSS template
@@ -19,12 +45,6 @@ This template is designed for students, researchers, and early-career academics 
 - Easy deployment with GitHub Pages
 - No framework, no build tools, no extra dependencies
 
-## Demo
-
-After enabling GitHub Pages, the homepage will be available at:
-
-    https://your-username.github.io/minimal-academic-homepage/
-
 ## File Structure
 
     minimal-academic-homepage/
@@ -37,7 +57,11 @@ After enabling GitHub Pages, the homepage will be available at:
         ├── pub-4.jpg
         ├── university-logo-1.png
         ├── university-logo-2.png
-        └── university-logo-3.png
+        ├── university-logo-3.png
+        ├── demo-overview.jpg
+        ├── demo-publications.jpg
+        ├── demo-projects-experience.jpg
+        └── demo-posts-notes.jpg
 
 ## How to Use
 
@@ -76,6 +100,15 @@ Recommended image names:
 
 You can keep the same file names to avoid editing image paths in `index.html`.
 
+The demo screenshots used in this README are:
+
+    assets/demo-overview.jpg
+    assets/demo-publications.jpg
+    assets/demo-projects-experience.jpg
+    assets/demo-posts-notes.jpg
+
+You can replace them with your own screenshots, or remove the `Screenshots` section if you do not need it.
+
 ### 4. Enable GitHub Pages
 
 Go to:
@@ -89,6 +122,14 @@ Choose:
     Folder: /root
 
 Save the settings. After a short wait, your homepage will be online.
+
+For a project repository, the page URL usually looks like:
+
+    https://your-username.github.io/minimal-academic-homepage/
+
+For a user homepage repository named `your-username.github.io`, the page URL usually looks like:
+
+    https://your-username.github.io/
 
 ## Customization
 
@@ -104,6 +145,14 @@ For example, edit:
     }
 
 You can also remove any section you do not need, such as `Selected Awards` or `Posts & Notes`.
+
+## Tips
+
+- Keep the homepage concise. A personal academic homepage should help readers quickly understand who you are, what you work on, and where to find your work.
+- Use publication highlights to summarize the main contribution of each paper in one sentence.
+- Use `Projects` for GitHub repositories, research tools, scripts, datasets, or tutorials.
+- Use `Posts & Notes` to organize blog posts, research notes, tutorials, or reading notes.
+- Keep image file names unchanged if you do not want to edit the HTML paths.
 
 ## Notes
 
