@@ -1,4 +1,4 @@
-# Minimal Academic Homepage
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2b7853b7-0d58-4a1f-aa9f-6360e2c42aae" /># Minimal Academic Homepage
 
 A minimal, responsive academic homepage template for GitHub Pages.
 
@@ -16,19 +16,20 @@ This demo shows the default template layout, including profile, selected publica
 
 Desktop and mobile overview:
 
-![Homepage overview](assets/demo-overview.jpg)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/24e5f4dd-4439-4314-b1d8-47ba7906f1a9" />
 
 Selected publications:
 
-![Selected publications](assets/demo-publications.jpg)
+<img width="900" height="852" alt="image" src="https://github.com/user-attachments/assets/f05a7a36-3b6c-459d-a47b-6d8a690169b7" />
+
 
 Projects, education, and awards:
 
-![Projects and experience](assets/demo-projects-experience.jpg)
+<img width="896" height="678" alt="image" src="https://github.com/user-attachments/assets/c1d0f990-ad52-4545-9f6f-96165f047c7b" />
 
 Posts and notes:
 
-![Posts and notes](assets/demo-posts-notes.jpg)
+<img width="898" height="567" alt="image" src="https://github.com/user-attachments/assets/99698708-0f8c-4fae-84e0-4f813c73e4da" />
 
 ## Features
 
