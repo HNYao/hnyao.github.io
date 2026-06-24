@@ -652,14 +652,17 @@
     }
 
     @media (max-width: 560px) {
-      .experience-marquee-logo {
-        width: 52px;
-        height: 52px;
+      .experience-marquee-track {
+        gap: 36px;
       }
 
       .experience-marquee-item {
-        width: 92px;
-        gap: 6px;
+        width: 110px;
+      }
+
+      .experience-marquee-logo {
+        width: 95px;
+        height: 50px;
       }
     }
   </style>
@@ -824,7 +827,7 @@
           </div>
           <div class="experience-marquee-item" aria-hidden="true">
             <div class="experience-marquee-logo">
-              <img src="assets/miroc.svg.jpg" alt="" style="--icon-size: 110%;" onerror="this.style.display='none'">
+              <img src="assets/miroc.svg.jpg" alt="" style="--icon-size: 100%;" onerror="this.style.display='none'">
             </div>
             <div class="experience-marquee-label">
               <strong>MIRoC Lab</strong>
@@ -833,7 +836,7 @@
           </div>
           <div class="experience-marquee-item" aria-hidden="true">
             <div class="experience-marquee-logo">
-              <img src="assets/mrl.png" alt="" style="--icon-size: 120%;" onerror="this.style.display='none'">
+              <img src="assets/mrl.png" alt="" style="--icon-size: 110%;" onerror="this.style.display='none'">
             </div>
             <div class="experience-marquee-label">
               <strong>MRL</strong>
@@ -860,7 +863,7 @@
           </div>
           <div class="experience-marquee-item" aria-hidden="true">
             <div class="experience-marquee-logo">
-              <img src="assets/siemens.jpg" alt="" style="--icon-size: 100%;" onerror="this.style.display='none'">
+              <img src="assets/siemens.jpg" alt="" style="--icon-size: 130%;" onerror="this.style.display='none'">
             </div>
             <div class="experience-marquee-label">
               <strong>Siemens</strong>
@@ -968,7 +971,8 @@
       let position = 0;       // current translateX (px, ≤ 0)
       let velocity = 0;       // wheel-induced velocity (px/frame), decays via friction
       let lastTime = null;
-      let baseSpeed = 1.2;    // auto-scroll speed (px/frame at 60fps → ~72 px/sec)
+      const isMobile = window.matchMedia('(max-width: 560px)').matches;
+      let baseSpeed = isMobile ? 0.7 : 1.2;    // auto-scroll speed (px/frame at 60fps)
       const friction = 0.92;  // per-frame velocity decay (closer to 1 = longer glide)
       const maxVelocity = 22;
 
@@ -998,7 +1002,7 @@
 
       // Pause auto-scroll on hover so user can read; wheel still works.
       marquee.addEventListener('mouseenter', function () { baseSpeed = 0; });
-      marquee.addEventListener('mouseleave', function () { baseSpeed = 1.2; });
+      marquee.addEventListener('mouseleave', function () { baseSpeed = isMobile ? 0.7 : 1.2; });
 
       requestAnimationFrame(step);
     })();
