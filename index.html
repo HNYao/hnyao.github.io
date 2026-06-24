@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name | Academic Homepage</title>
+  <title>Yao ZHONG | Academic Homepage</title>
   <style>
     :root {
       --bg: #f5f5f7;
@@ -107,7 +107,7 @@
     }
 
     .profile-photo {
-      height: 180px;
+      height: 280px;
       width: auto;
       display: block;
     }
@@ -192,6 +192,17 @@
       line-height: 1.5;
     }
 
+    button.pill-link {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    button.pill-link.copied {
+      background: rgba(220, 252, 231, 0.95);
+      border-color: #86efac;
+      color: #14532d;
+    }
+
     .pill-link:hover,
     .mini-link:hover {
       text-decoration: none;
@@ -229,6 +240,11 @@
       line-height: 1.48;
     }
 
+    .venue {
+      color: #14532d;
+      font-weight: 700;
+    }
+
     .authors {
       margin-top: 4px;
       color: var(--muted);
@@ -237,7 +253,7 @@
     }
 
     .me {
-      color: var(--text);
+      color: #1e3a8a;
       font-weight: 720;
     }
 
@@ -279,12 +295,12 @@
     }
 
     .publication-cover-wrap {
-      width: 250px;
-      height: 150px;
-      border-radius: 18px;
-      background: #fff;
-      border: 1px solid #e6e8ec;
-      box-shadow: var(--soft-shadow);
+      width: 230px;
+      height: 230px;
+      border-radius: 0;
+      background: transparent;
+      border: none;
+      box-shadow: none;
       overflow: hidden;
       display: flex;
       align-items: center;
@@ -574,45 +590,284 @@
         height: 190px;
       }
     }
+
+    .experience-marquee {
+      position: relative;
+      overflow: hidden;
+      margin-top: 8px;
+      padding: 8px 0 18px;
+      -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+              mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+    }
+
+    .experience-marquee-track {
+      display: flex;
+      width: max-content;
+      gap: 108px;
+      will-change: transform;
+    }
+
+    .experience-marquee-item {
+      flex: 0 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      width: 120px;
+    }
+
+    .experience-marquee-logo {
+      width: 190px;
+      height: 100px;
+      border-radius: 8px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .experience-marquee-logo img {
+      width: var(--icon-size, 100%);
+      height: var(--icon-size, 100%);
+      object-fit: contain;
+      display: block;
+    }
+
+    .experience-marquee-label {
+      font-size: 12.5px;
+      line-height: 1.35;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .experience-marquee-label strong {
+      display: block;
+      color: var(--text);
+      font-weight: 620;
+      font-size: 13.5px;
+      margin-bottom: 1px;
+    }
+
+    @media (max-width: 560px) {
+      .experience-marquee-logo {
+        width: 52px;
+        height: 52px;
+      }
+
+      .experience-marquee-item {
+        width: 92px;
+        gap: 6px;
+      }
+    }
   </style>
 </head>
 
 <body>
   <main class="container">
     <nav class="top-nav">
-      <div class="nav-name">Your Name</div>
+      <div class="nav-name">Yao Zhong @ HKU</div>
       <div class="nav-links">
-        <a href="#publications">Publications</a>
-        <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
-        <a href="#notes">Notes</a>
+        <a href="#publications">Publications</a>
+        <a href="#notes">Contact</a>
       </div>
     </nav>
 
     <section class="card hero">
       <div>
-        <h1>Your Name</h1>
+        <h1>Yao ZHONG</h1>
 
         <p class="identity">
-          Your Position or Degree Program<br>
-          Your Department, Your University
+          PhD Student<br>
+          MIRoC Lab, The University of Hong Kong
         </p>
 
         <p class="about-line">
-          I am a graduate student / researcher in your field at your university. My research focuses on your research direction, your second research direction, and your broader academic interests.
+          I am a PhD student in the <a href="https://meweb.hku.hk/zljiang/people/">Medical Intelligence and Robotics Cognition Lab (MIRoC)</a> at <a href="https://www.hku.hk/">The University of Hong Kong</a>
+, working with <a href="https://meweb.hku.hk/zljiang/">Prof. Zhongliang Jiang</a>. 
+          <br class="sm-break">  I received my M.Sc. degree with distinction from <a href="https://www.tum.de/">The Technical University of Munich</a> (Robotics, Cognition, Intelligence) and my B.Eng. degree from <a href="https://www.zju.edu.cn/english/">Zhejiang University</a>. 
+          During my master's studies, I was with the <a href="https://mrl.ethz.ch/the-group/people/mrs-tum.html"> Mobile Robot Lab (MRL)</a>, supervised by <a href="https://scholar.google.com/citations?hl=en&user=SmGQ48gAAAAJ&view_op=list_works&sortby=pubdate"> 
+            Prof. Stefan Leutenegger</a> and <a href="https://scholar.google.com/citations?user=GN0N_vQAAAAJ&hl=en">Hanzhi Chen</a>, focusing on robot learning.
+
+<br class="sm-break">My favorite leisure hours are spent wandering the trails and catching the golden hour.
         </p>
 
         <div class="links">
-          <a class="pill-link" href="mailto:your.email@example.com">Email</a>
-          <a class="pill-link" href="https://github.com/your-username" target="_blank">GitHub</a>
+          <button class="pill-link" type="button" data-copy-email="yao.zhong@connect.hku.hk">
+            <span class="pill-link-text">Email</span>
+          </button>
+          <a class="pill-link" href="https://github.com/HNYao" target="_blank">GitHub</a>
+          <a class="pill-link" href="https://www.linkedin.com/in/yao-zhong-72051223a/" target="_blank">LinkedIn</a>
           <a class="pill-link" href="https://scholar.google.com/" target="_blank">Google Scholar</a>
-          <a class="pill-link" href="https://orcid.org/" target="_blank">ORCID</a>
-          <a class="pill-link" href="#" target="_blank">ResearchGate</a>
         </div>
       </div>
 
+
+      
       <div class="profile-photo-wrap">
-        <img src="assets/profile.jpg" alt="Profile photo" class="profile-photo">
+        <img src="assets/profile_yao.jpg" alt="Profile photo" class="profile-photo">
+      </div>
+    </section>
+
+    <section class="card" id="experience">
+      <h2>Academic &amp; Professional Experiences</h2>
+
+      <div class="experience-marquee">
+        <div class="experience-marquee-track">
+          <!-- Real items -->
+          <div class="experience-marquee-item">
+            <div class="experience-marquee-logo">
+              <img src="assets/zju.png" alt="ZJU" style="--icon-size: 120%;" onerror="this.style.display='none'">
+            </div>
+            <div class="experience-marquee-label">
+              <strong>ZJU</strong>
+              B.Eng.
+            </div>
+          </div>
+
+          <div class="experience-marquee-item">
+            <div class="experience-marquee-logo">
+              <img src="assets/tum.png" alt="TUM" style="--icon-size: 180%;" onerror="this.style.display='none'">
+            </div>
+            <div class="experience-marquee-label">
+              <strong>TUM</strong>
+              M.Sc.
+            </div>
+          </div>
+          <div class="experience-marquee-item">
+            <div class="experience-marquee-logo">
+              <img src="assets/hku.jpg" alt="HKU" style="--icon-size: 120%;" onerror="this.style.display='none'">
+            </div>
+            <div class="experience-marquee-label">
+              <strong>HKU</strong>
+              PhD Student
+            </div>
+          </div>
+          <div class="experience-marquee-item">
+            <div class="experience-marquee-logo">
+              <img src="assets/miroc.svg.jpg" alt="MIRoC Lab" style="--icon-size: 100%;" onerror="this.style.display='none'">
+            </div>
+            <div class="experience-marquee-label">
+              <strong>MIRoC Lab</strong>
+              PhD Student
+            </div>
+          </div>
+          <div class="experience-marquee-item">
+            <div class="experience-marquee-logo">
+              <img src="assets/mrl.png" alt="MRL · TUM" style="--icon-size: 110%;" onerror="this.style.display='none'">
+            </div>
+            <div class="experience-marquee-label">
+              <strong>MRL</strong>
+              Master Thesis Student
+            </div>
+          </div>
+          <div class="experience-marquee-item">
+            <div class="experience-marquee-logo">
+              <img src="assets/NIO_logo.svg" alt="Industry Internship" style="--icon-size: 100%;" onerror="this.style.display='none'">
+            </div>
+            <div class="experience-marquee-label">
+              <strong>NIO</strong>
+              Internship · Working Student
+            </div>
+          </div>
+
+          <div class="experience-marquee-item">
+            <div class="experience-marquee-logo">
+              <img src="assets/fraunhofer.png" alt="Industry Internship" style="--icon-size: 100%;" onerror="this.style.display='none'">
+            </div>
+            <div class="experience-marquee-label">
+              <strong>Fraunhofer Institute IKS</strong>
+              Student Project
+            </div>
+          </div>
+
+          <div class="experience-marquee-item">
+            <div class="experience-marquee-logo">
+              <img src="assets/siemens.jpg" alt="Industry Internship" style="--icon-size: 130%;" onerror="this.style.display='none'">
+            </div>
+            <div class="experience-marquee-label">
+              <strong>Siemens</strong>
+              Student Project
+            </div>
+          </div>
+
+          <!-- Duplicated set for seamless loop (must mirror real items above exactly) -->
+          <div class="experience-marquee-item" aria-hidden="true">
+            <div class="experience-marquee-logo">
+              <img src="assets/zju.png" alt="" style="--icon-size: 120%;" onerror="this.style.display='none'">
+            </div>
+            <div class="experience-marquee-label">
+              <strong>ZJU</strong>
+              B.Eng.
+            </div>
+          </div>
+          <div class="experience-marquee-item" aria-hidden="true">
+            <div class="experience-marquee-logo">
+              <img src="assets/tum.png" alt="" style="--icon-size: 180%;" onerror="this.style.display='none'">
+            </div>
+            <div class="experience-marquee-label">
+              <strong>TUM</strong>
+              M.Sc.
+            </div>
+          </div>
+          <div class="experience-marquee-item" aria-hidden="true">
+            <div class="experience-marquee-logo">
+              <img src="assets/hku.jpg" alt="" style="--icon-size: 120%;" onerror="this.style.display='none'">
+            </div>
+            <div class="experience-marquee-label">
+              <strong>HKU</strong>
+              PhD Student
+            </div>
+          </div>
+          <div class="experience-marquee-item" aria-hidden="true">
+            <div class="experience-marquee-logo">
+              <img src="assets/miroc.svg.jpg" alt="" style="--icon-size: 110%;" onerror="this.style.display='none'">
+            </div>
+            <div class="experience-marquee-label">
+              <strong>MIRoC Lab</strong>
+              PhD Student
+            </div>
+          </div>
+          <div class="experience-marquee-item" aria-hidden="true">
+            <div class="experience-marquee-logo">
+              <img src="assets/mrl.png" alt="" style="--icon-size: 120%;" onerror="this.style.display='none'">
+            </div>
+            <div class="experience-marquee-label">
+              <strong>MRL</strong>
+              Master Thesis Student
+            </div>
+          </div>
+          <div class="experience-marquee-item" aria-hidden="true">
+            <div class="experience-marquee-logo">
+              <img src="assets/NIO_logo.svg" alt="" style="--icon-size: 100%;" onerror="this.style.display='none'">
+            </div>
+            <div class="experience-marquee-label">
+              <strong>NIO</strong>
+              Internship · Working Student
+            </div>
+          </div>
+          <div class="experience-marquee-item" aria-hidden="true">
+            <div class="experience-marquee-logo">
+              <img src="assets/fraunhofer.png" alt="" style="--icon-size: 100%;" onerror="this.style.display='none'">
+            </div>
+            <div class="experience-marquee-label">
+              <strong>Fraunhofer Institute IKS</strong>
+              Student Project
+            </div>
+          </div>
+          <div class="experience-marquee-item" aria-hidden="true">
+            <div class="experience-marquee-logo">
+              <img src="assets/siemens.jpg" alt="" style="--icon-size: 100%;" onerror="this.style.display='none'">
+            </div>
+            <div class="experience-marquee-label">
+              <strong>Siemens</strong>
+              Student Project
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -621,321 +876,170 @@
 
       <div class="publication-card">
         <div class="publication-cover-wrap">
-          <img src="assets/pub-1.jpg" alt="Publication cover 1" class="publication-cover">
+          <img src="assets/gopla.gif" alt="Publication cover 1" class="publication-cover">
         </div>
         <div>
           <div class="item-title">
-            Title of Your Selected Publication: Subtitle or Additional Description
+            GOPLA: Generalizable Object Placement Learning via Synthetic Augmentation of Human Arrangement
           </div>
-          <div class="authors"><span class="me">Your Name</span>, Coauthor A, and Coauthor B</div>
+          <div class="authors">
+            <span class="me">Yao Zhong</span>, 
+            <a href="https://hanzhic.github.io/"> Hanzhi Chen*</a>, 
+            <a href="https://simon-schaefer.github.io/">Simon Schaefer</a>, 
+            <a href="https://dipan-zhang.github.io/">Anran Zhang</a>, 
+            <a href="https://scholar.google.com/citations?hl=en&user=SmGQ48gAAAAJ&view_op=list_works&sortby=pubdate"> 
+            Stefan Leutenegger</a></div>
+          <div class="muted venue">IROS 2026</div>
           <div class="highlight">
             <span class="highlight-label">Highlight:</span>
-            Briefly describe the main contribution of this paper in one sentence.
+            We learn generalizable object placement through hierarchical language and spatial reasoning, using augmented human demonstrations.
           </div>
-          <div class="muted">Journal Name 12, 3456 (2026)</div>
-          <div class="muted">DOI: 10.xxxx/example-doi</div>
           <div class="mini-links">
-            <a class="mini-link" href="#" target="_blank">Journal</a>
-            <a class="mini-link" href="#" target="_blank">Blog Article</a>
+            <a class="mini-link" href="https://hnyao.github.io/gopla_project/" target="_blank">Project</a>
+            <a class="mini-link" href="https://www.youtube.com/watch?v=J847AX6uYHw&feature=youtu.be" target="_blank">Video</a>
+            <a class="mini-link" href="https://hnyao.github.io/gopla_project/" target="_blank">Code</a>
+            <a class="mini-link" href="https://arxiv.org/abs/2510.14627" target="_blank">Paper</a>
           </div>
-          <span class="tag">Keyword 1</span>
-          <span class="tag">Keyword 2</span>
-          <span class="tag">Keyword 3</span>
         </div>
       </div>
 
       <div class="publication-card">
         <div class="publication-cover-wrap">
-          <img src="assets/pub-2.jpg" alt="Publication cover 2" class="publication-cover">
+          <img src="assets/actron3d.gif" alt="Publication cover 2" class="publication-cover">
         </div>
         <div>
           <div class="item-title">
-            Title of Another Representative Publication
+            Actron3D: Learning Actionable Neural Functions from Videos for Transferable Robotic Manipulation
           </div>
-          <div class="authors"><span class="me">Your Name</span>, Coauthor A, and Coauthor B</div>
+          <div class="authors">
+            <a href="https://dipan-zhang.github.io/">Anran Zhang</a>,
+            <a href="https://hanzhic.github.io/">Hanzhi Chen*</a>,
+            <a href="https://yannickburkhardt.github.io/">Yannick Burkhardt</a>,
+            <span class="me">Yao Zhong</span>,
+            <a href="https://scholar.google.com/citations?user=6cuqviYAAAAJ">Johannes Betz</a>,
+            <a href="https://helenol.com/research/">Helen Oleynikova</a>,
+            <a href="https://scholar.google.com/citations?hl=en&user=SmGQ48gAAAAJ&view_op=list_works&sortby=pubdate">Stefan Leutenegger</a>
+          </div>
+          <div class="muted venue">ICRA 2026</div>
           <div class="highlight">
             <span class="highlight-label">Highlight:</span>
-            Summarize the research question, method, or key finding in a compact way.
+            Actron3D enables robots to acquire transferable 6-DoF manipulation skills from just a few monocular, uncalibrated, RGB-only human videos.
           </div>
-          <div class="muted">Journal or Conference Name 8, 1234 (2025)</div>
-          <div class="muted">DOI: 10.xxxx/example-doi</div>
           <div class="mini-links">
-            <a class="mini-link" href="#" target="_blank">Journal</a>
-            <a class="mini-link" href="#" target="_blank">Blog Article</a>
+            <a class="mini-link" href="https://dipan-zhang.github.io/Actron3D-project/" target="_blank">Project</a>
+            <a class="mini-link" href="https://www.youtube.com/watch?si=Nl2QhDZsqmhR8jw8&v=dO4DeuLwrU4&feature=youtu.be" target="_blank">Video</a>
+            <a class="mini-link" href="https://github.com/ethz-mrl/Actron3D" target="_blank">Code</a>
+            <a class="mini-link" href="https://arxiv.org/abs/2510.12971" target="_blank">Paper</a>
           </div>
-          <span class="tag">Keyword 1</span>
-          <span class="tag">Keyword 2</span>
         </div>
       </div>
 
       <div class="publication-card">
         <div class="publication-cover-wrap">
-          <img src="assets/pub-3.jpg" alt="Publication cover 3" class="publication-cover">
+          <img src="assets/infrared.jpg" alt="Publication cover 3" class="publication-cover">
         </div>
         <div>
           <div class="item-title">
-            Title of a Third Selected Publication
+            An Efficient Temperature Calibration Method Based on the Improved Infrared Forward Model and Bayesian Inference
           </div>
-          <div class="authors"><span class="me">Your Name</span> and Coauthor A</div>
-          <div class="highlight">
-            <span class="highlight-label">Highlight:</span>
-            Add a short explanation of why this work is representative.
-          </div>
-          <div class="muted">Journal or Conference Name 6, 7890 (2024)</div>
-          <div class="muted">DOI: 10.xxxx/example-doi</div>
+          <div class="authors">Ning Chu, Xu Yan, <span class="me">Yao Zhong</span>, Li Wang, Liang Yu, Caifang Cai, Ali Mohammad-Djafari</div>
+          <div class="muted venue">IEEE Sensors Journal 2024</div>
           <div class="mini-links">
             <a class="mini-link" href="#" target="_blank">Journal</a>
           </div>
-          <span class="tag">Keyword 1</span>
-          <span class="tag">Keyword 2</span>
-        </div>
-      </div>
-
-      <div class="publication-card">
-        <div class="publication-cover-wrap">
-          <img src="assets/pub-4.jpg" alt="Publication cover 4" class="publication-cover">
-        </div>
-        <div>
-          <div class="item-title">
-            Title of a Fourth Selected Publication
-          </div>
-          <div class="authors"><span class="me">Your Name</span>, Coauthor A, and Coauthor B</div>
-          <div class="highlight">
-            <span class="highlight-label">Highlight:</span>
-            Use this line to help readers quickly understand the contribution.
-          </div>
-          <div class="muted">Journal or Conference Name 4, 5678 (2023)</div>
-          <div class="muted">DOI: 10.xxxx/example-doi</div>
-          <div class="mini-links">
-            <a class="mini-link" href="#" target="_blank">Journal</a>
-            <a class="mini-link" href="#" target="_blank">Blog Article</a>
-          </div>
-          <span class="tag">Keyword 1</span>
-          <span class="tag">Keyword 2</span>
-          <span class="tag">Keyword 3</span>
         </div>
       </div>
     </section>
 
-    <section class="card" id="projects">
-      <h2>Projects</h2>
+ 
 
-      <div class="project-grid">
-        <div class="project-card">
-          <div>
-            <div class="project-title">Project One</div>
-            <div class="project-desc">
-              A short description of this project, tool, dataset, or software package.
-            </div>
-          </div>
-          <div class="mini-links">
-            <a class="mini-link" href="#" target="_blank">GitHub</a>
-            <a class="mini-link" href="#" target="_blank">Article</a>
-          </div>
-        </div>
 
-        <div class="project-card">
-          <div>
-            <div class="project-title">Project Two</div>
-            <div class="project-desc">
-              A short description of another research project or open-source tool.
-            </div>
-          </div>
-          <div class="mini-links">
-            <a class="mini-link" href="#" target="_blank">GitHub</a>
-            <a class="mini-link" href="#" target="_blank">Article</a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div>
-            <div class="project-title">Project Three</div>
-            <div class="project-desc">
-              A short description of a small script, tutorial project, or research utility.
-            </div>
-          </div>
-          <div class="mini-links">
-            <a class="mini-link" href="#" target="_blank">GitHub</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="more-block">
-        <details>
-          <summary>See more projects</summary>
-          <div class="more-project-grid">
-            <div class="project-card">
-              <div>
-                <div class="project-title">Additional Project One</div>
-                <div class="project-desc">
-                  Add more projects here if needed.
-                </div>
-              </div>
-              <div class="mini-links">
-                <a class="mini-link" href="#" target="_blank">Link</a>
-              </div>
-            </div>
-
-            <div class="project-card">
-              <div>
-                <div class="project-title">Additional Project Two</div>
-                <div class="project-desc">
-                  Add a short description of this project.
-                </div>
-              </div>
-              <div class="mini-links">
-                <a class="mini-link" href="#" target="_blank">Link</a>
-              </div>
-            </div>
-
-            <div class="project-card">
-              <div>
-                <div class="project-title">Additional Project Three</div>
-                <div class="project-desc">
-                  Add a short description of this project.
-                </div>
-              </div>
-              <div class="mini-links">
-                <a class="mini-link" href="#" target="_blank">Link</a>
-              </div>
-            </div>
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <section class="card" id="experience">
-      <h2>Education & Experience</h2>
-
-      <div class="experience-awards-grid">
-        <div class="info-panel">
-          <h3>Education & Experience</h3>
-          <div class="timeline">
-            <div class="timeline-item">
-              <img class="school-logo" src="assets/university-logo-1.png" alt="University logo" onerror="this.style.display='none'">
-              <div>
-                <div class="timeline-time">2020–2024</div>
-                <div class="timeline-title">University Name, Department or Program, Degree</div>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <img class="school-logo" src="assets/university-logo-2.png" alt="University logo" onerror="this.style.display='none'">
-              <div>
-                <div class="timeline-time">2024–Present</div>
-                <div class="timeline-title">University Name, Department, Graduate Student / Researcher, Advisor: Advisor Name</div>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <img class="school-logo" src="assets/university-logo-3.png" alt="University logo" onerror="this.style.display='none'">
-              <div>
-                <div class="timeline-time">2025–Present</div>
-                <div class="timeline-title">Visiting Student / Research Intern, Host Institution, Host Group</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="info-panel">
-          <h3>Selected Awards</h3>
-          <div class="award-list">
-            <span class="award-chip">Selected Award One</span>
-            <span class="award-chip">Selected Award Two</span>
-            <span class="award-chip">Selected Award Three</span>
-            <span class="award-chip">Scholarship or Fellowship</span>
-            <span class="award-chip">Competition Award</span>
-          </div>
-
-          <details>
-            <summary>See more awards</summary>
-            <div class="award-list">
-              <span class="award-chip">Additional Award One</span>
-              <span class="award-chip">Additional Award Two</span>
-              <span class="award-chip">Additional Award Three</span>
-              <span class="award-chip">Teaching or Service Award</span>
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="card" id="notes">
-      <h2>Posts & Notes</h2>
-
-      <div class="note-grid">
-        <div class="note-card">
-          <h3>Theory Notes</h3>
-          <p class="section-note">Notes on theories, concepts, and background knowledge.</p>
-          <ul class="post-list">
-            <li><a href="#" target="_blank">Title of a theory note or tutorial</a></li>
-            <li><a href="#" target="_blank">Title of another theory note</a></li>
-            <li><a href="#" target="_blank">Title of a third theory note</a></li>
-          </ul>
-          <details>
-            <summary>See more theory notes</summary>
-            <ul class="post-list">
-              <li><a href="#" target="_blank">Additional note title</a></li>
-              <li><a href="#" target="_blank">Additional note title</a></li>
-              <li><a href="#" target="_blank">Additional note title</a></li>
-            </ul>
-          </details>
-        </div>
-
-        <div class="note-card">
-          <h3>Research Workflow</h3>
-          <p class="section-note">Notes on tools, writing, reading, coding, and research workflow.</p>
-          <ul class="post-list">
-            <li><a href="#" target="_blank">Title of a workflow note</a></li>
-            <li><a href="#" target="_blank">Title of a plotting or coding note</a></li>
-            <li><a href="#" target="_blank">Title of a writing or reading note</a></li>
-          </ul>
-          <details>
-            <summary>See more workflow notes</summary>
-            <ul class="post-list">
-              <li><a href="#" target="_blank">Additional workflow note</a></li>
-              <li><a href="#" target="_blank">Additional workflow note</a></li>
-              <li><a href="#" target="_blank">Additional workflow note</a></li>
-            </ul>
-          </details>
-        </div>
-
-        <div class="note-card">
-          <h3>Literature Notes</h3>
-          <p class="section-note">Reading notes on papers, books, or research topics.</p>
-          <ul class="post-list">
-            <li><a href="#" target="_blank">Title of a literature note</a></li>
-            <li><a href="#" target="_blank">Title of another literature note</a></li>
-            <li><a href="#" target="_blank">Title of a third literature note</a></li>
-          </ul>
-          <details>
-            <summary>See more literature notes</summary>
-            <ul class="post-list">
-              <li><a href="#" target="_blank">Additional literature note</a></li>
-            </ul>
-          </details>
-        </div>
-
-        <div class="note-card">
-          <h3>Computational Methods</h3>
-          <p class="section-note">Notes on computational methods, scripts, and practical techniques.</p>
-          <ul class="post-list">
-            <li><a href="#" target="_blank">Title of a computational method note</a></li>
-            <li><a href="#" target="_blank">Title of another computational method note</a></li>
-          </ul>
-          <details>
-            <summary>See more computational notes</summary>
-            <ul class="post-list">
-              <li><a href="#" target="_blank">Additional computational note</a></li>
-            </ul>
-          </details>
-        </div>
-      </div>
-    </section>
-  </main>
 
   <footer class="footer">
-    © 2026 Your Name. Built with GitHub Pages.
+    © 2026 Yao Zhong. Thanks for the nice template from Jiaqi XU.
   </footer>
+
+  <script>
+    (function () {
+      const marquee = document.querySelector('.experience-marquee');
+      const track = document.querySelector('.experience-marquee-track');
+      if (!marquee || !track) return;
+
+      let position = 0;       // current translateX (px, ≤ 0)
+      let velocity = 0;       // wheel-induced velocity (px/frame), decays via friction
+      let lastTime = null;
+      let baseSpeed = 1.2;    // auto-scroll speed (px/frame at 60fps → ~72 px/sec)
+      const friction = 0.92;  // per-frame velocity decay (closer to 1 = longer glide)
+      const maxVelocity = 22;
+
+      function step(now) {
+        if (lastTime === null) lastTime = now;
+        const dt = (now - lastTime) / (1000 / 60); // normalize to per-frame units
+        lastTime = now;
+
+        position -= (baseSpeed + velocity) * dt;
+        velocity *= Math.pow(friction, dt);
+
+        // Seamless wrap: keep position in [-halfWidth, 0]
+        const halfWidth = track.scrollWidth / 2;
+        if (position <= -halfWidth) position += halfWidth;
+        if (position > 0) position -= halfWidth;
+
+        track.style.transform = 'translateX(' + position.toFixed(2) + 'px)';
+        requestAnimationFrame(step);
+      }
+
+      marquee.addEventListener('wheel', function (e) {
+        e.preventDefault();
+        velocity += e.deltaY * 0.05;
+        if (velocity > maxVelocity) velocity = maxVelocity;
+        if (velocity < -maxVelocity) velocity = -maxVelocity;
+      }, { passive: false });
+
+      // Pause auto-scroll on hover so user can read; wheel still works.
+      marquee.addEventListener('mouseenter', function () { baseSpeed = 0; });
+      marquee.addEventListener('mouseleave', function () { baseSpeed = 1.2; });
+
+      requestAnimationFrame(step);
+    })();
+
+    (function () {
+      const btn = document.querySelector('[data-copy-email]');
+      if (!btn) return;
+      const text = btn.querySelector('.pill-link-text');
+      const original = text.textContent;
+      let resetTimer = null;
+
+      async function copyEmail() {
+        const email = btn.dataset.copyEmail;
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(email);
+          } else {
+            // Fallback for older browsers / non-secure contexts
+            const ta = document.createElement('textarea');
+            ta.value = email;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+          }
+          text.textContent = '✓ Copied';
+          btn.classList.add('copied');
+        } catch (err) {
+          text.textContent = '✗ Failed';
+        }
+        clearTimeout(resetTimer);
+        resetTimer = setTimeout(function () {
+          text.textContent = original;
+          btn.classList.remove('copied');
+        }, 1800);
+      }
+
+      btn.addEventListener('click', copyEmail);
+    })();
+  </script>
 </body>
 </html>
